@@ -6,7 +6,7 @@ class Book(override var price: Int, override var wordCount: Int) : Publication {
         else if (wordCount in 7500..10000)
             "Short Story"
         else
-            "Flash Fiction"
+            "Flash  Fiction"
     }
 
     override fun equals(other: Any?): Boolean {
