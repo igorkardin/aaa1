@@ -1,12 +1,11 @@
-class Book(override var price: Int, override var wordCount: Int) : Publication {
+class Book(override val price: Int, override val wordCount: Int) : Publication {
 
     override fun getType(): String {
-        return if (wordCount > 10000)
-            "Novel"
-        else if (wordCount in 7500..10000)
-            "Short Story"
-        else
-            "Flash  Fiction"
+        return when (wordCount) {
+            in 10000.. Int.MAX_VALUE -> "Novel"
+            in 7500 until  10000 -> "Short Story"
+            else -> "Flash  Fiction"
+        }
     }
 
     override fun equals(other: Any?): Boolean {

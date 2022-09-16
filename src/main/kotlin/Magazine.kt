@@ -1,3 +1,3 @@
-class Magazine(override var price: Int, override var wordCount: Int) : Publication {
+class Magazine(override val price: Int, override val wordCount: Int) : Publication {
     override fun getType() = "Magazine"
 }
