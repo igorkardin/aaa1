@@ -11,6 +11,7 @@ class Book(override val price: Int, override val wordCount: Int) : Publication {
     override fun equals(other: Any?): Boolean {
         if (other === this) return true
         if (other !is Book) return false
+        
         return other.price == price && other.wordCount == wordCount
     }
 
